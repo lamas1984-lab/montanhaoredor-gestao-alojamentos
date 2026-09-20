@@ -8,11 +8,12 @@ type SiteCopy = {
   status: string;
   menu: string;
   close: string;
-  nav: { services: string; operation: string; value: string; plans: string; contact: string };
+  nav: { services: string; area: string; operation: string; value: string; plans: string; contact: string };
   links: { casa: string; transfers: string };
   hero: { eyebrow: string; title: string; italic: string; description: string; primary: string; secondary: string; photoAlt: string };
   proof: Array<{ value: string; label: string }>;
   intro: { label: string; title: string; text: string; quote: string };
+  coverage: { label: string; title: string; text: string; region: string; places: string[]; exceptionTitle: string; exceptionText: string };
   services: { label: string; title: string; intro: string; items: ServiceItem[] };
   operation: { label: string; title: string; text: string; imageAlt: string; steps: Step[] };
   preparation: { label: string; title: string; text: string; imageAlt: string; points: string[] };
@@ -26,10 +27,10 @@ export const flags: Record<Lang, string> = { pt: "PT", en: "EN", de: "DE", nl: "
 
 export const copy: Record<Lang, SiteCopy> = {
   pt: {
-    status: "Apoio local · propostas ajustadas a cada alojamento",
+    status: "Região Centro · apoio local e propostas à medida",
     menu: "Abrir menu",
     close: "Fechar menu",
-    nav: { services: "Serviços", operation: "Operação", value: "Valorização", plans: "Formas de apoio", contact: "Contacto" },
+    nav: { services: "Serviços", area: "Área de atuação", operation: "Operação", value: "Valorização", plans: "Formas de apoio", contact: "Contacto" },
     links: { casa: "Casa do Lagar", transfers: "Transfers & Tours" },
     hero: {
       eyebrow: "Gestão de alojamentos locais",
@@ -51,6 +52,15 @@ export const copy: Record<Lang, SiteCopy> = {
       title: "Gerir bem começa por conhecer a casa.",
       text: "Cada alojamento tem uma história, um ritmo e necessidades próprias. Começamos por ouvir o proprietário, visitar o espaço e perceber onde a nossa presença acrescenta valor — sem transformar um serviço próximo numa operação impessoal.",
       quote: "Libertar o tempo do proprietário sem retirar personalidade à casa.",
+    },
+    coverage: {
+      label: "Área de atuação",
+      title: "Perto da sua casa, onde a presença conta.",
+      text: "A nossa intervenção concentra-se na Região Centro de Portugal, onde conseguimos assegurar proximidade, resposta e um conhecimento prático do território.",
+      region: "Região Centro · prioridade local",
+      places: ["Leiria e praias", "Figueira da Foz", "Mira de Aire", "Fátima", "Óbidos", "Caldas da Rainha"],
+      exceptionTitle: "Outras zonas",
+      exceptionText: "Áreas mais abrangentes ou fora destas localidades podem ser consideradas excecionalmente, após análise da viabilidade operacional, orçamento específico e aceitação prévia.",
     },
     services: {
       label: "O nosso apoio",
@@ -113,10 +123,10 @@ export const copy: Record<Lang, SiteCopy> = {
     footer: { descriptor: "Gestão de Alojamentos", note: "Proximidade, cuidado e visão prática." },
   },
   en: {
-    status: "Local support · proposals tailored to each property",
+    status: "Central Portugal · local support and tailored proposals",
     menu: "Open menu",
     close: "Close menu",
-    nav: { services: "Services", operation: "Operations", value: "Improvement", plans: "Support options", contact: "Contact" },
+    nav: { services: "Services", area: "Service area", operation: "Operations", value: "Improvement", plans: "Support options", contact: "Contact" },
     links: { casa: "Casa do Lagar", transfers: "Transfers & Tours" },
     hero: {
       eyebrow: "Local accommodation management",
@@ -138,6 +148,15 @@ export const copy: Record<Lang, SiteCopy> = {
       title: "Good management starts by knowing the home.",
       text: "Every accommodation has its own story, rhythm and needs. We begin by listening to the owner, visiting the space and understanding where our presence adds value — without turning personal service into an impersonal operation.",
       quote: "Giving the owner time back without taking personality away from the home.",
+    },
+    coverage: {
+      label: "Service area",
+      title: "Close to your property, where presence matters.",
+      text: "Our work is focused on Portugal's Central Region, where we can provide genuine proximity, reliable response and practical knowledge of the territory.",
+      region: "Central Portugal · local priority",
+      places: ["Leiria and its beaches", "Figueira da Foz", "Mira de Aire", "Fátima", "Óbidos", "Caldas da Rainha"],
+      exceptionTitle: "Other areas",
+      exceptionText: "A wider coverage area or locations outside these places may be considered exceptionally, following an operational feasibility review, a specific quotation and prior acceptance.",
     },
     services: {
       label: "Our support",
@@ -200,10 +219,10 @@ export const copy: Record<Lang, SiteCopy> = {
     footer: { descriptor: "Accommodation Management", note: "Proximity, care and practical vision." },
   },
   de: {
-    status: "Lokale Betreuung · Angebote passend zu jeder Unterkunft",
+    status: "Zentralportugal · lokale Betreuung und individuelle Angebote",
     menu: "Menü öffnen",
     close: "Menü schließen",
-    nav: { services: "Leistungen", operation: "Betrieb", value: "Aufwertung", plans: "Betreuungsmodelle", contact: "Kontakt" },
+    nav: { services: "Leistungen", area: "Einsatzgebiet", operation: "Betrieb", value: "Aufwertung", plans: "Betreuungsmodelle", contact: "Kontakt" },
     links: { casa: "Casa do Lagar", transfers: "Transfers & Tours" },
     hero: {
       eyebrow: "Betreuung von Ferienunterkünften",
@@ -225,6 +244,15 @@ export const copy: Record<Lang, SiteCopy> = {
       title: "Gute Betreuung beginnt damit, das Haus zu kennen.",
       text: "Jede Unterkunft hat ihre eigene Geschichte, ihren Rhythmus und ihre Bedürfnisse. Wir hören dem Eigentümer zu, besichtigen den Ort und verstehen, wo unsere Präsenz Mehrwert schafft — ohne persönlichen Service in einen unpersönlichen Betrieb zu verwandeln.",
       quote: "Dem Eigentümer Zeit zurückgeben, ohne dem Haus seine Persönlichkeit zu nehmen.",
+    },
+    coverage: {
+      label: "Einsatzgebiet",
+      title: "In der Nähe Ihrer Unterkunft, wo Präsenz zählt.",
+      text: "Unser Schwerpunkt liegt in der Zentralregion Portugals. Dort können wir echte Nähe, verlässliche Reaktion und praktische Kenntnis der Region gewährleisten.",
+      region: "Zentralportugal · lokale Priorität",
+      places: ["Leiria und Strände", "Figueira da Foz", "Mira de Aire", "Fátima", "Óbidos", "Caldas da Rainha"],
+      exceptionTitle: "Weitere Gebiete",
+      exceptionText: "Ein größerer Aktionsradius oder Orte außerhalb dieser Gebiete können ausnahmsweise berücksichtigt werden — nach Prüfung der operativen Machbarkeit, individuellem Angebot und vorheriger Zustimmung.",
     },
     services: {
       label: "Unsere Unterstützung",
@@ -287,10 +315,10 @@ export const copy: Record<Lang, SiteCopy> = {
     footer: { descriptor: "Unterkunftsbetreuung", note: "Nähe, Sorgfalt und praktischer Blick." },
   },
   nl: {
-    status: "Lokale ondersteuning · voorstellen op maat van elke woning",
+    status: "Centraal-Portugal · lokale ondersteuning en voorstellen op maat",
     menu: "Menu openen",
     close: "Menu sluiten",
-    nav: { services: "Diensten", operation: "Werking", value: "Verbetering", plans: "Ondersteuningsvormen", contact: "Contact" },
+    nav: { services: "Diensten", area: "Werkgebied", operation: "Werking", value: "Verbetering", plans: "Ondersteuningsvormen", contact: "Contact" },
     links: { casa: "Casa do Lagar", transfers: "Transfers & Tours" },
     hero: {
       eyebrow: "Beheer van vakantieverblijven",
@@ -312,6 +340,15 @@ export const copy: Record<Lang, SiteCopy> = {
       title: "Goed beheer begint met de woning kennen.",
       text: "Elke accommodatie heeft een eigen verhaal, ritme en behoeften. We luisteren eerst naar de eigenaar, bezoeken de ruimte en bekijken waar onze aanwezigheid waarde toevoegt — zonder persoonlijke service in een onpersoonlijke operatie te veranderen.",
       quote: "De eigenaar tijd teruggeven zonder de woning haar persoonlijkheid te ontnemen.",
+    },
+    coverage: {
+      label: "Werkgebied",
+      title: "Dicht bij uw woning, waar aanwezigheid telt.",
+      text: "Onze dienstverlening is vooral gericht op de Centrale Regio van Portugal, waar we nabijheid, een betrouwbare respons en praktische terreinkennis kunnen bieden.",
+      region: "Centraal-Portugal · lokale prioriteit",
+      places: ["Leiria en stranden", "Figueira da Foz", "Mira de Aire", "Fátima", "Óbidos", "Caldas da Rainha"],
+      exceptionTitle: "Andere gebieden",
+      exceptionText: "Een ruimer werkgebied of locaties buiten deze plaatsen kunnen uitzonderlijk worden overwogen, na beoordeling van de operationele haalbaarheid, een specifieke offerte en voorafgaande aanvaarding.",
     },
     services: {
       label: "Onze ondersteuning",

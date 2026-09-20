@@ -48,16 +48,18 @@ async function inspect(label, viewport, screenshot) {
   }
 
   const languageTitles = {};
+  const languageCoverage = {};
   for (const language of ["EN", "DE", "NL", "PT"]) {
     await page.getByRole("button", { name: `Idioma ${language}` }).click();
     languageTitles[language] = (await page.locator("h1").textContent())?.replace(/\s+/g, " ").trim();
+    languageCoverage[language] = (await page.locator("#area").textContent())?.replace(/\s+/g, " ").trim();
     const hasOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     if (hasOverflow) throw new Error(`${label}: overflow horizontal no idioma ${language}`);
   }
   await page.screenshot({ path: screenshot, fullPage: true });
   await page.close();
 
-  return { label, ...result, languageTitles, consoleErrors: errors };
+  return { label, ...result, languageTitles, languageCoverage, consoleErrors: errors };
 }
 
 const results = [
@@ -73,6 +75,10 @@ for (const result of results) {
   if (!result.languageTitles.DE?.includes("Ihr Haus")) throw new Error(`${result.label}: tradução alemã não aplicada`);
   if (!result.languageTitles.NL?.includes("Uw woning")) throw new Error(`${result.label}: tradução neerlandesa não aplicada`);
   if (!result.languageTitles.PT?.includes("A sua casa")) throw new Error(`${result.label}: tradução portuguesa não aplicada`);
+  if (!result.languageCoverage.EN?.includes("Central Portugal")) throw new Error(`${result.label}: cobertura inglesa não aplicada`);
+  if (!result.languageCoverage.DE?.includes("Zentralportugal")) throw new Error(`${result.label}: cobertura alemã não aplicada`);
+  if (!result.languageCoverage.NL?.includes("Centraal-Portugal")) throw new Error(`${result.label}: cobertura neerlandesa não aplicada`);
+  if (!result.languageCoverage.PT?.includes("Leiria e praias") || !result.languageCoverage.PT?.includes("Caldas da Rainha")) throw new Error(`${result.label}: localidades portuguesas incompletas`);
   if (result.consoleErrors.length) throw new Error(`${result.label}: erros de consola: ${result.consoleErrors.join(" | ")}`);
 }
 

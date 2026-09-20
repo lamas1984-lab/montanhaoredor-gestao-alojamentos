@@ -9,6 +9,7 @@ import {
   ExternalLink,
   KeyRound,
   Mail,
+  MapPin,
   Menu,
   MessageCircle,
   PackageCheck,
@@ -98,6 +99,7 @@ export default function App() {
 
   const navItems = [
     { id: "servicos", label: t.nav.services },
+    { id: "area", label: t.nav.area },
     { id: "operacao", label: t.nav.operation },
     { id: "valorizacao", label: t.nav.value },
     { id: "formas", label: t.nav.plans },
@@ -148,7 +150,7 @@ export default function App() {
           {navItems.map((item, index) => (
             <button key={item.id} onClick={() => navigate(item.id)}><small>0{index + 1}</small>{item.label}<ChevronRight size={20} /></button>
           ))}
-          <button onClick={() => navigate("contacto")}><small>05</small>{t.nav.contact}<ChevronRight size={20} /></button>
+          <button onClick={() => navigate("contacto")}><small>0{navItems.length + 1}</small>{t.nav.contact}<ChevronRight size={20} /></button>
           <a href={links.casaDoLagar} target="_blank" rel="noreferrer"><small>↗</small>{t.links.casa}<ExternalLink size={18} /></a>
           <a href={links.transfers} target="_blank" rel="noreferrer"><small>↗</small>{t.links.transfers}<ExternalLink size={18} /></a>
         </div>
@@ -187,6 +189,29 @@ export default function App() {
             <p>{t.intro.text}</p>
           </div>
           <blockquote>{t.intro.quote}</blockquote>
+        </section>
+
+        <section id="area" className="coverage-section content-section">
+          <div className="coverage-copy">
+            <p className="eyebrow">{t.coverage.label}</p>
+            <h2>{t.coverage.title}</h2>
+            <p>{t.coverage.text}</p>
+          </div>
+          <div className="coverage-card">
+            <div className="coverage-region"><MapPin size={18} /><span>{t.coverage.region}</span></div>
+            <div className="coverage-places">
+              {t.coverage.places.map((place, index) => (
+                <div className="coverage-place" key={place}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{place}</strong>
+                </div>
+              ))}
+            </div>
+            <div className="coverage-exception">
+              <MapPin size={21} strokeWidth={1.4} />
+              <div><h3>{t.coverage.exceptionTitle}</h3><p>{t.coverage.exceptionText}</p></div>
+            </div>
+          </div>
         </section>
 
         <section id="servicos" className="services-section content-section">
