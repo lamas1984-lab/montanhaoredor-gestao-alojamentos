@@ -24,12 +24,10 @@ pnpm build
 node scripts/visual-check.mjs
 ```
 
-## Pré-visualização temporária
-
-O servidor usa a porta `4174`. O endereço público temporário desta sessão é:
-
-`https://4174-ia7ss5jxrm52092ojb92b-1bdf4106.us1.manus.computer/`
-
 ## Publicação
 
-Para produção, recomenda-se um domínio próprio como `gestao.montanhaoredor.com`. A ligação ao site Casa do Lagar e ao projeto Transfers é feita por URLs públicas; nenhum dos repositórios é importado ou alterado.
+O site é publicado automaticamente pelo GitHub Pages após cada atualização da branch `main`:
+
+`https://lamas1984-lab.github.io/montanhaoredor-gestao-alojamentos/`
+
+A ligação ao site Casa do Lagar e ao projeto Transfers é feita por URLs públicas; nenhum dos repositórios é importado ou alterado.

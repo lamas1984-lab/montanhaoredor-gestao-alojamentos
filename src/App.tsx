@@ -298,7 +298,7 @@ export default function App() {
         </section>
 
         <section className="artisan-section" aria-label={t.shop.label}>
-          <div className="artisan-mark" aria-hidden="true">✦</div>
+          <img className="artisan-image" src={assets.localProducts} alt="Pinhal e Lagoa — Margarida Sequeira" loading="lazy" />
           <div className="artisan-copy">
             <p className="eyebrow">{t.shop.label}</p>
             <h2>{t.shop.title}</h2>

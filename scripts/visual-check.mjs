@@ -1,6 +1,6 @@
 import { chromium } from "playwright-core";
 
-const baseUrl = "https://4174-ia7ss5jxrm52092ojb92b-1bdf4106.us1.manus.computer/";
+const baseUrl = process.env.BASE_URL || "http://127.0.0.1:4174/";
 const executablePath = "/usr/bin/chromium";
 const browser = await chromium.launch({ headless: true, executablePath, args: ["--no-sandbox"] });
 
@@ -37,7 +37,7 @@ async function inspect(label, viewport, screenshot) {
     brokenImages: [...document.images].filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.src),
     overflow: document.documentElement.scrollWidth > window.innerWidth + 1,
     casaLink: document.querySelector(`a[href="https://www.montanhaoredor.com"]`)?.getAttribute("target"),
-    transfersLink: document.querySelector(`a[href*="4173-ia7ss5jxrm52092ojb92b"]`)?.getAttribute("target"),
+    transfersLink: document.querySelector(`a[href="https://lamas1984-lab.github.io/montanhaoredor-transfers-tours/"]`)?.getAttribute("target"),
     shopLink: document.querySelector(`a[href="https://margaridaart-dawxjx6v.manus.space/"]`)?.getAttribute("target"),
   }));
 

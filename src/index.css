@@ -161,7 +161,7 @@ blockquote { margin: 0; padding: 2.2rem; color: var(--brand-olive-dark); border-
 .proposal-note button { min-height: 44px; display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 1rem; border: 1px solid rgba(245,240,232,.35); background: transparent; color: var(--brand-cream); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; }
 
 .artisan-section { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding: clamp(3rem, 6vw, 5.5rem) max(1.25rem, calc((100vw - 1240px) / 2)); background: #f8f5ee; border-top: 1px solid rgba(38,58,43,.12); }
-.artisan-mark { width: 64px; height: 64px; display: grid; place-items: center; border: 1px solid rgba(38,58,43,.25); color: var(--brand-teal); font: 400 2rem var(--font-heading); }
+.artisan-image { width: 112px; height: 112px; object-fit: cover; border: 1px solid rgba(38,58,43,.2); box-shadow: 0 12px 30px rgba(38,58,43,.12); }
 .artisan-copy .eyebrow { margin-bottom: .7rem; }
 .artisan-copy h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.9rem, 3.5vw, 3.2rem); font-weight: 500; letter-spacing: -.025em; line-height: 1; }
 .artisan-copy > p:last-child { max-width: 780px; margin: .8rem 0 0; color: #5f665e; font-size: .86rem; line-height: 1.7; }
@@ -266,7 +266,7 @@ footer > p { text-align: center; }
   .coverage-places { grid-template-columns: 1fr; }
   .coverage-place:nth-child(odd), .coverage-place:nth-child(even) { padding: .95rem .2rem; border-right: 0; }
   .artisan-section { grid-template-columns: 1fr; }
-  .artisan-mark { width: 54px; height: 54px; }
+  .artisan-image { width: 88px; height: 88px; }
   .artisan-link { grid-column: 1; }
   .value-list { grid-template-columns: 1fr; }
 }
