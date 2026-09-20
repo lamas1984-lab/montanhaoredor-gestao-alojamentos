@@ -9,6 +9,7 @@ export const assets = {
 export const links = {
   casaDoLagar: "https://www.montanhaoredor.com",
   transfers: "https://4173-ia7ss5jxrm52092ojb92b-1bdf4106.us1.manus.computer/",
+  localProducts: "https://margaridaart-dawxjx6v.manus.space/",
   email: "visit@montanhaoredor.com",
   whatsappNumber: "351918859403",
 } as const;

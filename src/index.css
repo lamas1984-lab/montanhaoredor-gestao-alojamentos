@@ -160,6 +160,15 @@ blockquote { margin: 0; padding: 2.2rem; color: var(--brand-olive-dark); border-
 .proposal-note p { max-width: 760px; margin: .4rem 0 0; color: rgba(245,240,232,.62); font-size: .8rem; line-height: 1.6; }
 .proposal-note button { min-height: 44px; display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 1rem; border: 1px solid rgba(245,240,232,.35); background: transparent; color: var(--brand-cream); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; }
 
+.artisan-section { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding: clamp(3rem, 6vw, 5.5rem) max(1.25rem, calc((100vw - 1240px) / 2)); background: #f8f5ee; border-top: 1px solid rgba(38,58,43,.12); }
+.artisan-mark { width: 64px; height: 64px; display: grid; place-items: center; border: 1px solid rgba(38,58,43,.25); color: var(--brand-teal); font: 400 2rem var(--font-heading); }
+.artisan-copy .eyebrow { margin-bottom: .7rem; }
+.artisan-copy h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.9rem, 3.5vw, 3.2rem); font-weight: 500; letter-spacing: -.025em; line-height: 1; }
+.artisan-copy > p:last-child { max-width: 780px; margin: .8rem 0 0; color: #5f665e; font-size: .86rem; line-height: 1.7; }
+.artisan-link { display: inline-flex; align-items: center; gap: .6rem; padding: .85rem 1.1rem; border: 1px solid var(--brand-olive); color: var(--brand-olive-dark); text-decoration: none; font-size: .63rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; white-space: nowrap; transition: color .18s ease, background .18s ease, transform .16s var(--ease-out); }
+.artisan-link:hover { background: var(--brand-olive-dark); color: var(--brand-cream); }
+.artisan-link:active { transform: scale(.97); }
+
 .contact-section { position: relative; min-height: 650px; display: grid; place-items: center; padding: 5rem 1.25rem; background: var(--brand-olive-dark); overflow: hidden; }
 .contact-pattern { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(157,224,215,.08); transform: rotate(-8deg) scale(2); }
 .contact-card { position: relative; z-index: 2; width: min(770px, 100%); padding: clamp(2rem, 5vw, 4.5rem); border: 1px solid rgba(245,240,232,.18); background: rgba(26,42,30,.78); color: var(--brand-cream); text-align: center; backdrop-filter: blur(16px); }
@@ -239,6 +248,8 @@ footer > p { text-align: center; }
   .value-content { padding: 4.5rem 1.25rem; }
   .proposal-note { grid-template-columns: auto 1fr; padding: 1.5rem; }
   .proposal-note button { grid-column: 1 / -1; justify-content: center; }
+  .artisan-section { grid-template-columns: auto 1fr; }
+  .artisan-link { grid-column: 2; justify-self: start; white-space: normal; }
   footer { grid-template-columns: 1fr; text-align: center; }
   .footer-brand { justify-content: center; }
   footer > p, .footer-note { margin: 0; text-align: center; }
@@ -254,6 +265,9 @@ footer > p { text-align: center; }
   .coverage-copy h2 { font-size: 2.45rem; }
   .coverage-places { grid-template-columns: 1fr; }
   .coverage-place:nth-child(odd), .coverage-place:nth-child(even) { padding: .95rem .2rem; border-right: 0; }
+  .artisan-section { grid-template-columns: 1fr; }
+  .artisan-mark { width: 54px; height: 54px; }
+  .artisan-link { grid-column: 1; }
   .value-list { grid-template-columns: 1fr; }
 }
 

@@ -297,6 +297,18 @@ export default function App() {
           </div>
         </section>
 
+        <section className="artisan-section" aria-label={t.shop.label}>
+          <div className="artisan-mark" aria-hidden="true">✦</div>
+          <div className="artisan-copy">
+            <p className="eyebrow">{t.shop.label}</p>
+            <h2>{t.shop.title}</h2>
+            <p>{t.shop.text}</p>
+          </div>
+          <a className="artisan-link" href={links.localProducts} target="_blank" rel="noreferrer">
+            {t.shop.cta}<ExternalLink size={15} />
+          </a>
+        </section>
+
         <section id="contacto" className="contact-section">
           <div className="contact-pattern" aria-hidden="true"><ShieldCheck size={260} strokeWidth={0.5} /></div>
           <div className="contact-card">

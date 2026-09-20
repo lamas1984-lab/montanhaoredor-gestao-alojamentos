@@ -38,6 +38,7 @@ async function inspect(label, viewport, screenshot) {
     overflow: document.documentElement.scrollWidth > window.innerWidth + 1,
     casaLink: document.querySelector(`a[href="https://www.montanhaoredor.com"]`)?.getAttribute("target"),
     transfersLink: document.querySelector(`a[href*="4173-ia7ss5jxrm52092ojb92b"]`)?.getAttribute("target"),
+    shopLink: document.querySelector(`a[href="https://margaridaart-dawxjx6v.manus.space/"]`)?.getAttribute("target"),
   }));
 
   if (label === "mobile") {
@@ -73,6 +74,7 @@ for (const result of results) {
   if (result.brokenImages.length) throw new Error(`${result.label}: imagens com erro: ${result.brokenImages.join(", ")}`);
   if (result.overflow) throw new Error(`${result.label}: overflow horizontal detetado`);
   if (result.casaLink !== "_blank" || result.transfersLink !== "_blank") throw new Error(`${result.label}: ligações entre projetos inválidas`);
+  if (result.shopLink !== "_blank") throw new Error(`${result.label}: ligação MargaridaArt inválida`);
   if (!result.languageTitles.EN?.includes("Your home")) throw new Error(`${result.label}: tradução inglesa não aplicada`);
   if (!result.languageTitles.DE?.includes("Ihr Haus")) throw new Error(`${result.label}: tradução alemã não aplicada`);
   if (!result.languageTitles.NL?.includes("Uw woning")) throw new Error(`${result.label}: tradução neerlandesa não aplicada`);

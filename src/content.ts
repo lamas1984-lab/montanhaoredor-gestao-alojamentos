@@ -20,6 +20,7 @@ type SiteCopy = {
   value: { label: string; title: string; text: string; imageAlt: string; points: string[] };
   plans: { label: string; title: string; intro: string; cards: Plan[]; noteTitle: string; noteText: string };
   contact: { label: string; title: string; text: string; whatsapp: string; email: string; note: string };
+  shop: { label: string; title: string; text: string; cta: string };
   footer: { descriptor: string; note: string };
 };
 
@@ -120,6 +121,7 @@ export const copy: Record<Lang, SiteCopy> = {
       email: "Enviar email",
       note: "Sem compromisso · proposta após conhecer o alojamento",
     },
+    shop: { label: "Uma recomendação da nossa confiança", title: "Produtos locais, arte & handmade", text: "Conheça a MargaridaArt: um espaço de venda e promoção de arte, trabalhos handmade, produtos locais e escolhas selecionadas com atenção à origem, ao cuidado artesanal e à responsabilidade ambiental.", cta: "Visitar MargaridaArt" },
     footer: { descriptor: "Gestão de Alojamentos", note: "Proximidade, cuidado e visão prática." },
   },
   en: {
@@ -216,6 +218,7 @@ export const copy: Record<Lang, SiteCopy> = {
       email: "Send an email",
       note: "No commitment · proposal after learning about the property",
     },
+    shop: { label: "A trusted recommendation", title: "Local products, art & handmade work", text: "Discover MargaridaArt: a space presenting art, handmade work, local products and trusted choices selected with attention to origin, craftsmanship and environmental responsibility.", cta: "Visit MargaridaArt" },
     footer: { descriptor: "Accommodation Management", note: "Proximity, care and practical vision." },
   },
   de: {
@@ -312,6 +315,7 @@ export const copy: Record<Lang, SiteCopy> = {
       email: "E-Mail senden",
       note: "Unverbindlich · Angebot nach Kennenlernen der Unterkunft",
     },
+    shop: { label: "Eine Empfehlung unseres Vertrauens", title: "Lokale Produkte, Kunst & Handarbeit", text: "Entdecken Sie MargaridaArt: Kunst, handgefertigte Arbeiten, lokale Produkte und sorgfältig ausgewählte Angebote mit Blick auf Herkunft, Handwerkskunst und Umweltverantwortung.", cta: "MargaridaArt besuchen" },
     footer: { descriptor: "Unterkunftsbetreuung", note: "Nähe, Sorgfalt und praktischer Blick." },
   },
   nl: {
@@ -408,6 +412,7 @@ export const copy: Record<Lang, SiteCopy> = {
       email: "Stuur een e-mail",
       note: "Vrijblijvend · voorstel na kennismaking met de woning",
     },
+    shop: { label: "Een vertrouwde aanbeveling", title: "Lokale producten, kunst & handmade werk", text: "Ontdek MargaridaArt: kunst, handmade werk, lokale producten en vertrouwde keuzes, geselecteerd met aandacht voor herkomst, vakmanschap en verantwoordelijkheid voor het milieu.", cta: "Bezoek MargaridaArt" },
     footer: { descriptor: "Beheer van Verblijven", note: "Nabijheid, zorg en praktische visie." },
   },
 };
