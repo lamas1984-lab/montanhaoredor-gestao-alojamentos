@@ -1,0 +1,13 @@
+:root {
+  --brand-olive: #4a5c2a;
+  --brand-olive-light: #718267;
+  --brand-olive-dark: #263a2b;
+  --brand-cream: #f5f0e8;
+  --brand-cream-dark: #e9e4d8;
+  --brand-teal: #2ba89a;
+  --brand-copper: #b66b4f;
+  --brand-charcoal: #2c2c2a;
+  --brand-stone: #ded7ca;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+}
