@@ -49,17 +49,19 @@ async function inspect(label, viewport, screenshot) {
 
   const languageTitles = {};
   const languageCoverage = {};
+  const homeStagingVisible = {};
   for (const language of ["EN", "DE", "NL", "PT"]) {
     await page.getByRole("button", { name: `Idioma ${language}` }).click();
     languageTitles[language] = (await page.locator("h1").textContent())?.replace(/\s+/g, " ").trim();
     languageCoverage[language] = (await page.locator("#area").textContent())?.replace(/\s+/g, " ").trim();
+    homeStagingVisible[language] = (await page.locator("body").innerText()).toLowerCase().includes("home staging");
     const hasOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     if (hasOverflow) throw new Error(`${label}: overflow horizontal no idioma ${language}`);
   }
   await page.screenshot({ path: screenshot, fullPage: true });
   await page.close();
 
-  return { label, ...result, languageTitles, languageCoverage, consoleErrors: errors };
+  return { label, ...result, languageTitles, languageCoverage, homeStagingVisible, consoleErrors: errors };
 }
 
 const results = [
@@ -79,6 +81,7 @@ for (const result of results) {
   if (!result.languageCoverage.DE?.includes("Zentralportugal")) throw new Error(`${result.label}: cobertura alemã não aplicada`);
   if (!result.languageCoverage.NL?.includes("Centraal-Portugal")) throw new Error(`${result.label}: cobertura neerlandesa não aplicada`);
   if (!result.languageCoverage.PT?.includes("Leiria e praias") || !result.languageCoverage.PT?.includes("Caldas da Rainha")) throw new Error(`${result.label}: localidades portuguesas incompletas`);
+  if (Object.values(result.homeStagingVisible).some((visible) => !visible)) throw new Error(`${result.label}: home staging não está visível em todos os idiomas`);
   if (result.consoleErrors.length) throw new Error(`${result.label}: erros de consola: ${result.consoleErrors.join(" | ")}`);
 }
 

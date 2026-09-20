@@ -71,7 +71,7 @@ export const copy: Record<Lang, SiteCopy> = {
         { title: "Limpeza & lavandaria", text: "Preparação entre estadias, roupa de cama e banho, limpeza cuidada e controlo final do espaço.", note: "Turnover · verificação" },
         { title: "Consumíveis & controlo", text: "Reposição do essencial, inspeção visual da casa e coordenação de pequenas necessidades no terreno.", note: "Reposição · acompanhamento" },
         { title: "Apoio ao hóspede", text: "Resposta a dúvidas práticas e apoio na articulação de necessidades que surjam durante a estadia.", note: "Presença · tranquilidade" },
-        { title: "Espaço & identidade", text: "Sugestões de decoração, preparação fotográfica e melhorias práticas para receber melhor.", note: "Imagem · funcionalidade" },
+        { title: "Home staging & identidade", text: "Preparação estratégica do espaço, sugestões de decoração, composição para fotografia e melhorias práticas para receber melhor.", note: "Imagem · funcionalidade" },
         { title: "Potencial & crescimento", text: "Leitura do posicionamento, organização de preços e apoio em decisões de valorização do alojamento.", note: "Estratégia · evolução" },
       ],
     },
@@ -96,9 +96,9 @@ export const copy: Record<Lang, SiteCopy> = {
     value: {
       label: "Valorização",
       title: "Melhorar o espaço sem perder a sua identidade.",
-      text: "Analisamos o alojamento com olhos de hóspede e de proprietário. Procuramos melhorias realistas na decoração, funcionalidade, apresentação, preços e experiência — sempre de acordo com o investimento disponível.",
+      text: "Analisamos o alojamento com olhos de hóspede e de proprietário. O apoio pode incluir home staging e melhorias realistas na decoração, funcionalidade, apresentação, preços e experiência — sempre de acordo com o investimento disponível.",
       imageAlt: "Proprietário e consultor a estudar melhorias para um alojamento",
-      points: ["Leitura visual do espaço", "Sugestões de decoração", "Preparação para fotografia", "Organização de preços", "Previsão de potencial", "Prioridades de investimento"],
+      points: ["Leitura visual do espaço", "Sugestões de decoração", "Home staging e fotografia", "Organização de preços", "Previsão de potencial", "Prioridades de investimento"],
     },
     plans: {
       label: "Formas de apoio",
@@ -167,7 +167,7 @@ export const copy: Record<Lang, SiteCopy> = {
         { title: "Cleaning & laundry", text: "Turnover preparation, bed and bath linen, thoughtful cleaning and a final check of the space.", note: "Turnover · inspection" },
         { title: "Supplies & checks", text: "Restocking essentials, visual property checks and coordination of small on-site needs.", note: "Restocking · follow-up" },
         { title: "Guest support", text: "Answers to practical questions and help coordinating agreed needs during the stay.", note: "Presence · reassurance" },
-        { title: "Space & identity", text: "Decor guidance, photographic preparation and practical improvements to welcome guests better.", note: "Image · function" },
+        { title: "Home staging & identity", text: "Strategic space preparation, decor guidance, styling for photography and practical improvements to welcome guests better.", note: "Image · function" },
         { title: "Potential & growth", text: "Positioning review, price organisation and support for decisions that strengthen the property.", note: "Strategy · progress" },
       ],
     },
@@ -192,9 +192,9 @@ export const copy: Record<Lang, SiteCopy> = {
     value: {
       label: "Property improvement",
       title: "Improve the space without losing its identity.",
-      text: "We look at the accommodation through both guest and owner eyes. We identify realistic improvements in decor, function, presentation, pricing and experience, always respecting the available investment.",
+      text: "We look at the accommodation through both guest and owner eyes. Support can include home staging and realistic improvements in decor, function, presentation, pricing and experience, always respecting the available investment.",
       imageAlt: "Owner and advisor reviewing improvements for a guesthouse",
-      points: ["Visual space review", "Decor suggestions", "Photo preparation", "Price organisation", "Potential forecast", "Investment priorities"],
+      points: ["Visual space review", "Decor suggestions", "Home staging and photography", "Price organisation", "Potential forecast", "Investment priorities"],
     },
     plans: {
       label: "Ways we can help",
@@ -263,7 +263,7 @@ export const copy: Record<Lang, SiteCopy> = {
         { title: "Reinigung & Wäsche", text: "Vorbereitung zwischen Aufenthalten, Bett- und Badwäsche, sorgfältige Reinigung und Endkontrolle.", note: "Wechsel · Kontrolle" },
         { title: "Ausstattung & Kontrolle", text: "Auffüllen des Wesentlichen, visuelle Hauskontrolle und Koordination kleiner Anliegen vor Ort.", note: "Nachfüllen · Betreuung" },
         { title: "Gästebetreuung", text: "Antworten auf praktische Fragen und Unterstützung bei vereinbarten Bedürfnissen während des Aufenthalts.", note: "Präsenz · Sicherheit" },
-        { title: "Raum & Identität", text: "Einrichtungshinweise, Vorbereitung für Fotos und praktische Verbesserungen für einen besseren Empfang.", note: "Bild · Funktion" },
+        { title: "Home Staging & Identität", text: "Strategische Raumvorbereitung, Einrichtungshinweise, Gestaltung für Fotos und praktische Verbesserungen für einen besseren Empfang.", note: "Bild · Funktion" },
         { title: "Potenzial & Entwicklung", text: "Analyse der Positionierung, Preisorganisation und Unterstützung bei wertsteigernden Entscheidungen.", note: "Strategie · Entwicklung" },
       ],
     },
@@ -288,9 +288,9 @@ export const copy: Record<Lang, SiteCopy> = {
     value: {
       label: "Aufwertung",
       title: "Den Raum verbessern, ohne seine Identität zu verlieren.",
-      text: "Wir betrachten die Unterkunft mit den Augen von Gästen und Eigentümern. Wir suchen realistische Verbesserungen bei Einrichtung, Funktion, Präsentation, Preisen und Erlebnis — passend zum verfügbaren Budget.",
+      text: "Wir betrachten die Unterkunft mit den Augen von Gästen und Eigentümern. Die Unterstützung kann Home Staging und realistische Verbesserungen bei Einrichtung, Funktion, Präsentation, Preisen und Erlebnis umfassen — passend zum verfügbaren Budget.",
       imageAlt: "Eigentümer und Berater planen Verbesserungen einer Ferienunterkunft",
-      points: ["Visuelle Raumanalyse", "Einrichtungsvorschläge", "Vorbereitung für Fotos", "Preisorganisation", "Potenzialeinschätzung", "Investitionsprioritäten"],
+      points: ["Visuelle Raumanalyse", "Einrichtungsvorschläge", "Home Staging & Fotovorbereitung", "Preisorganisation", "Potenzialeinschätzung", "Investitionsprioritäten"],
     },
     plans: {
       label: "Betreuungsmodelle",
@@ -359,7 +359,7 @@ export const copy: Record<Lang, SiteCopy> = {
         { title: "Schoonmaak & was", text: "Voorbereiding tussen verblijven, bed- en badlinnen, zorgvuldige schoonmaak en eindcontrole.", note: "Wissel · controle" },
         { title: "Benodigdheden & controle", text: "Aanvullen van het essentiële, visuele woningcontrole en coördinatie van kleine behoeften ter plaatse.", note: "Aanvullen · opvolging" },
         { title: "Gastenondersteuning", text: "Antwoorden op praktische vragen en hulp bij afgesproken behoeften tijdens het verblijf.", note: "Aanwezigheid · rust" },
-        { title: "Ruimte & identiteit", text: "Inrichtingsadvies, voorbereiding voor fotografie en praktische verbeteringen voor een beter onthaal.", note: "Beeld · functie" },
+        { title: "Home staging & identiteit", text: "Strategische voorbereiding van de ruimte, inrichtingsadvies, styling voor fotografie en praktische verbeteringen voor een beter onthaal.", note: "Beeld · functie" },
         { title: "Potentieel & groei", text: "Analyse van positionering, prijsorganisatie en ondersteuning bij waardeverhogende beslissingen.", note: "Strategie · vooruitgang" },
       ],
     },
@@ -384,9 +384,9 @@ export const copy: Record<Lang, SiteCopy> = {
     value: {
       label: "Verbetering",
       title: "De ruimte verbeteren zonder haar identiteit te verliezen.",
-      text: "We bekijken de accommodatie door de ogen van gast en eigenaar. We zoeken realistische verbeteringen in inrichting, functie, presentatie, prijzen en ervaring, passend bij de beschikbare investering.",
+      text: "We bekijken de accommodatie door de ogen van gast en eigenaar. De ondersteuning kan home staging en realistische verbeteringen in inrichting, functie, presentatie, prijzen en ervaring omvatten, passend bij de beschikbare investering.",
       imageAlt: "Eigenaar en adviseur bespreken verbeteringen voor een vakantieverblijf",
-      points: ["Visuele analyse", "Inrichtingssuggesties", "Voorbereiding voor foto's", "Prijsorganisatie", "Potentieelinschatting", "Investeringsprioriteiten"],
+      points: ["Visuele analyse", "Inrichtingssuggesties", "Home staging en fotografie", "Prijsorganisatie", "Potentieelinschatting", "Investeringsprioriteiten"],
     },
     plans: {
       label: "Ondersteuningsvormen",
